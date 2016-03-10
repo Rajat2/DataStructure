@@ -15,6 +15,7 @@ public class Test{
 	            System.out.println("2. search");
 	            System.out.println("3. count nodes");
 	            System.out.println("4. check empty");
+	            System.out.println("5. Height");
 	            int choice = scan.nextInt();            
 	            switch (choice)
 	            {
@@ -32,6 +33,13 @@ public class Test{
 	            case 4 : 
 	                System.out.print("Empty status = "+ bst.isEmpty());
 	                break;            
+	            case 5:
+	            	System.out.println("Height is: "+ bst.getHeight());
+	            	break;
+	            case 6:
+	            	bst.inorder();
+	            	bst.p();
+	            	break;
 	            default : 
 	                System.out.print("Wrong Entry \n ");
 	                break;   
@@ -40,8 +48,10 @@ public class Test{
 	            bst.postorder();
 	            System.out.print("\nPre order : ");
 	            bst.preorder();
-	            System.out.print("\nIn order : ");
-	            bst.inorder();
+	            //System.out.print("\nIn order : ");
+	            //bst.inorder();
+	            System.out.print("\nLevel order : ");
+	            bst.levelorder();
 	            
 	            System.out.println("\n\nDo you want to continue (Type y or n) \n");
 	            ch = scan.next().charAt(0); 

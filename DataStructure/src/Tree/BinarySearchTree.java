@@ -1,5 +1,7 @@
 package Tree;
 
+import java.util.Stack;
+
 
 public class BinarySearchTree {
 	Tree_Node root;
@@ -61,18 +63,55 @@ public class BinarySearchTree {
 			return l;
 		}
 	}
+	//Height
+	int getHeight(){
+		return height(root);
+	}
+	int height(Tree_Node root){
+		if(root==null)
+			return 0;
+		else
+			return 1 + Math.max(height(root.left),height(root.right));
+	}
+	//levelorder
+	void levelorder(){
+		levelorder(root);
+	}
+	void levelorder(Tree_Node root){
+		int height = getHeight();
+		for(int i=1;i<=height;i++){
+			levelorder(root, i);
+		}
+	}
+	void levelorder(Tree_Node root,int level){
+		if(root == null)
+			return;
+		else if(level==1)
+			System.out.println(root.getData()+" , ");
+		else if(level>1){
+			levelorder(root.left, level-1);
+			levelorder(root.right, level-1);
+		}
+				
+	}
+	
 	//Inorder
 	void inorder(){
 		inorder(root);
 	}
+	static Stack<Integer> stack = new Stack<>();
 	void inorder(Tree_Node root){
 		if(root!=null){
 			inorder(root.getLeft());
-			System.out.print(root.getData()+" , ");
+			//System.out.print(root.getData()+" , ");
+			stack.push(root.getData());
 			inorder(root.getRight());
 		}
 	}
 	
+	void p(){
+		System.out.println(stack);
+	}
 	//Preorder
 		void preorder(){
 			preorder(root);

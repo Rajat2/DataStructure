@@ -25,8 +25,7 @@ public class Test {
 		}
 		System.out.println("Max Heap");
 		//Max Heap
-		try{
-			MaxHeap heap = new MaxHeap(10);
+		try{			MaxHeap heap = new MaxHeap(10);
 			heap.insert(20);
 			heap.insert(10);
 			heap.insert(30);
