@@ -1,4 +1,9 @@
 package Sorting;
+
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.PriorityQueue;
+
 public class QSort {
 	static int A[] = {-50,-50,34,30,-34,-200,-10,-90};
 	public static void QSort(int[] A,int left,int right){
@@ -45,5 +50,13 @@ public class QSort {
 	}
 	public static void main(String[] args) {
 		QSort(A,0,A.length-1);
+		PriorityQueue<Integer> p = new PriorityQueue<>(10, new Comparator<Integer>() {
+
+			@Override
+			public int compare(Integer o1, Integer o2) {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+		});
 	}
 }

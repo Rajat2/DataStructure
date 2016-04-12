@@ -36,11 +36,11 @@ public class DFS_Adjacency_List {
 		//int N = scan.nextInt();
 		int N = 7;
 		DFS_Adjacency_List dfs = new DFS_Adjacency_List(N);
-		dfs.addEdge(1, 4);
 		dfs.addEdge(1, 2);
-		dfs.addEdge(4, 5);
-		dfs.addEdge(4, 6);
-		dfs.addEdge(6, 3);
+		dfs.addEdge(2, 3);
+		dfs.addEdge(2, 5);
+		dfs.addEdge(2, 6);
+		dfs.addEdge(1, 4);
 		dfs.DFS(1);
 		//scan.close();
 	}

@@ -1,5 +1,7 @@
 package Sorting;
 
+import java.util.Arrays;
+
 public class InsertionSort {
 	 public static void insertionSort(int array[]) {
 	        int n = array.length;
@@ -16,11 +18,10 @@ public class InsertionSort {
 	        }
 	    }
 	 public static void printNumbers(int []a){
-		 for(int b:a)
-			 System.out.print(b+" ");
+			 System.out.print(Arrays.toString(a));
 	 }
 	 public static void main(String[] args) {
-		 int array[] = {10,20,30,90,70,100,80,90,100};
+		 int array[] = {50,40,30,20,90};
 		insertionSort(array);
 	}
 }

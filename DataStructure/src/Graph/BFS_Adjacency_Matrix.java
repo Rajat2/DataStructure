@@ -14,22 +14,18 @@ public class BFS_Adjacency_Matrix {
 		queue.add(src);
 		int i = src;
 		while(!queue.isEmpty()){
-			int node = queue.peek();
+			int node = queue.poll();
 			//System.out.println("Node: "+node);
-			i = 0;
+			i = node;
 			while(i<=N){
 				if(adj[node][i]==1 && !visited[i]){
 					queue.add(i);
 					System.out.println("Queue after push  : "+ queue);
 					System.out.println("                      Visited: "+i);
 					visited[i] = true;
-					node = i;
-					i=1;
-					continue;
 				}
 				i++;
 			}
-			queue.poll();
 			System.out.println("Queue after pop  : "+ queue);
 		}
 	}

@@ -35,7 +35,9 @@ public class BFS_Adjacency_List {
 					queue.add(n);
 				}
 			}	
+			System.out.println(queue);
 		}
+		
 	}
 	
 	public static void main(String[] args) {
